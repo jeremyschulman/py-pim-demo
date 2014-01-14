@@ -1,0 +1,15 @@
+---
+PimJoinTable:
+  rpc: get-pim-join-information
+  item: join-family/join-group
+  key: 
+    - multicast-source-address  
+    - multicast-group-address
+  view: _PimJoinTableView
+
+_PimJoinTableView:
+  fields:
+    rp: rendezvous-point-address
+    up_iface: upstream-interface-name
+    dn_iface: downstream-interface/pim-interface-name
+    dn_iface_count: { downstream-interface-count: int }
